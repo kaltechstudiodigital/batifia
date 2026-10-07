@@ -854,37 +854,53 @@
         </div>
       </div>
 
-      <form onsubmit="event.preventDefault(); document.getElementById('formMsg').style.display='block';">
-        <div class="form-row">
-          <div class="field">
+      <form action="https://api.web3forms.com/submit" method="POST">
+
+    <input type="hidden" name="access_key" value="04573b09-63d3-4769-ae9a-af0778ab22e7">
+    <input type="hidden" name="subject" value="Nouvelle demande depuis Batifia.com">
+    <input type="hidden" name="from_name" value="Site Batifia">
+
+    <div class="form-row">
+        <div class="field">
             <label for="nom">Nom</label>
-            <input id="nom" type="text" placeholder="Votre nom" required>
-          </div>
-          <div class="field">
+            <input id="nom" name="Nom" type="text" placeholder="Votre nom" required>
+        </div>
+
+        <div class="field">
             <label for="tel">Téléphone</label>
-            <input id="tel" type="tel" placeholder="Votre numéro">
-          </div>
+            <input id="tel" name="Telephone" type="tel" placeholder="Votre numéro">
         </div>
-        <div class="field">
-          <label for="courriel">Courriel</label>
-          <input id="courriel" type="email" placeholder="vous@exemple.com" required>
-        </div>
-        <div class="field">
-          <label for="type">Type d'espace</label>
-          <select id="type">
-            <option>Bureau / PME</option>
-            <option>Commerce</option>
-            <option>Maison</option>
-            <option>Chantier / BTP</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="message">Détails</label>
-          <textarea id="message" placeholder="Surface approximative, fréquence souhaitée, horaires qui vous conviennent…"></textarea>
-        </div>
-        <button type="submit" class="form-submit">Envoyer la demande</button>
-        <p class="form-note" id="formMsg" role="status">L’envoi des demandes sera disponible après la configuration de contact@batifia.com. Aucune demande n’est envoyée pour le moment.</p>
-      </form>
+    </div>
+
+    <div class="field">
+        <label for="courriel">Courriel</label>
+        <input id="courriel" name="email" type="email" placeholder="vous@exemple.com" required>
+    </div>
+
+    <div class="field">
+        <label for="type">Type d'espace</label>
+        <select id="type" name="Type_espace">
+            <option value="PME">PME</option>
+            <option value="Commerce">Commerce</option>
+            <option value="Maison">Maison</option>
+            <option value="Chantier / BTP">Chantier / BTP</option>
+        </select>
+    </div>
+
+    <div class="field">
+        <label for="message">Détails</label>
+        <textarea
+            id="message"
+            name="message"
+            placeholder="Surface approximative, fréquence souhaitée, horaires qui vous conviennent..."
+        ></textarea>
+    </div>
+
+    <button type="submit" class="form-submit">
+        Envoyer la demande
+    </button>
+
+</form>
     </div>
   </div>
 </section>
